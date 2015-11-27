@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--firstViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="firstViewController" id="BYZ-38-t0r" customClass="firstViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,35 +18,144 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jMFJiQMr" translatesAutoresizingMaskIntoConstraints="NO" id="BuX-94-DrQ">
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="jMFJiQMr" translatesAutoresizingMaskIntoConstraints="NO" id="BuX-94-DrQ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cav-Sd-ua3">
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cav-Sd-ua3">
                                 <rect key="frame" x="205" y="233" width="191" height="134"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                 <state key="normal" title="Map View" backgroundImage="map">
                                     <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="218" width="220" height="150"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="114" y="237" width="172" height="126"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="105" y="133" width="191" height="134"/>
                                 </variation>
+                                <connections>
+                                    <action selector="moveMapView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="96T-Nt-5UY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cav-Sd-ua3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="D9a-H9-zhj"/>
+                            <constraint firstItem="Cav-Sd-ua3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="205" id="Gdw-Vr-Q97"/>
+                            <constraint firstAttribute="trailing" secondItem="BuX-94-DrQ" secondAttribute="trailing" id="Q54-Hp-0An"/>
+                            <constraint firstItem="BuX-94-DrQ" firstAttribute="centerX" secondItem="Cav-Sd-ua3" secondAttribute="centerX" id="a68-1r-5yM"/>
+                            <constraint firstItem="BuX-94-DrQ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="iKb-nz-IGc"/>
+                            <constraint firstItem="Cav-Sd-ua3" firstAttribute="centerY" secondItem="BuX-94-DrQ" secondAttribute="centerY" id="jTr-g3-g0y"/>
+                            <constraint firstItem="BuX-94-DrQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="r8x-Zi-OEn"/>
+                            <constraint firstItem="BuX-94-DrQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tg1-QO-jDc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Q54-Hp-0An"/>
+                                <exclude reference="a68-1r-5yM"/>
+                                <exclude reference="iKb-nz-IGc"/>
+                                <exclude reference="r8x-Zi-OEn"/>
+                                <exclude reference="tg1-QO-jDc"/>
+                                <exclude reference="D9a-H9-zhj"/>
+                                <exclude reference="Gdw-Vr-Q97"/>
+                                <exclude reference="jTr-g3-g0y"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Q54-Hp-0An"/>
+                                <include reference="a68-1r-5yM"/>
+                                <include reference="iKb-nz-IGc"/>
+                                <include reference="r8x-Zi-OEn"/>
+                                <include reference="tg1-QO-jDc"/>
+                                <include reference="D9a-H9-zhj"/>
+                                <include reference="Gdw-Vr-Q97"/>
+                                <include reference="jTr-g3-g0y"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="mapViewButton" destination="Cav-Sd-ua3" id="hco-0v-h1P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="324" y="399"/>
+            <point key="canvasLocation" x="378" y="399"/>
+        </scene>
+        <!--secondViewController-->
+        <scene sceneID="kLa-mx-yTz">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" title="secondViewController" id="QnG-fQ-Yw1" customClass="secondViewController" customModule="Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5F2-AX-mDI"/>
+                        <viewControllerLayoutGuide type="bottom" id="jUB-rD-wnM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7vl-nc-J84">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDC-HK-wBT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Map View" id="3pi-Nv-Deg"/>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5li-NA-xDt">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5li-NA-xDt" firstAttribute="bottom" secondItem="jUB-rD-wnM" secondAttribute="top" id="Dcd-OS-Vnc"/>
+                            <constraint firstAttribute="trailing" secondItem="qDC-HK-wBT" secondAttribute="trailing" id="FPd-1Y-xOo"/>
+                            <constraint firstItem="qDC-HK-wBT" firstAttribute="trailing" secondItem="5li-NA-xDt" secondAttribute="trailing" id="aLb-TL-ZUV"/>
+                            <constraint firstItem="5li-NA-xDt" firstAttribute="leading" secondItem="7vl-nc-J84" secondAttribute="leading" id="cXn-fW-z8z"/>
+                            <constraint firstItem="5li-NA-xDt" firstAttribute="leading" secondItem="qDC-HK-wBT" secondAttribute="leading" id="j5R-mT-sw5"/>
+                            <constraint firstItem="5li-NA-xDt" firstAttribute="top" secondItem="qDC-HK-wBT" secondAttribute="bottom" id="unV-An-j8D"/>
+                            <constraint firstItem="qDC-HK-wBT" firstAttribute="top" secondItem="7vl-nc-J84" secondAttribute="top" id="ygS-Ql-DS1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qDC-HK-wBT"/>
+                                <exclude reference="5li-NA-xDt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="FPd-1Y-xOo"/>
+                                <exclude reference="aLb-TL-ZUV"/>
+                                <exclude reference="ygS-Ql-DS1"/>
+                                <exclude reference="Dcd-OS-Vnc"/>
+                                <exclude reference="cXn-fW-z8z"/>
+                                <exclude reference="j5R-mT-sw5"/>
+                                <exclude reference="unV-An-j8D"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qDC-HK-wBT"/>
+                                <include reference="5li-NA-xDt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="FPd-1Y-xOo"/>
+                                <include reference="aLb-TL-ZUV"/>
+                                <include reference="ygS-Ql-DS1"/>
+                                <include reference="Dcd-OS-Vnc"/>
+                                <include reference="cXn-fW-z8z"/>
+                                <include reference="j5R-mT-sw5"/>
+                                <include reference="unV-An-j8D"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Ck9-ZJ-HXj"/>
+                    <connections>
+                        <outlet property="mapView" destination="5li-NA-xDt" id="Vgy-z0-gsY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qU-Fk-ngm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1027.5" y="399"/>
         </scene>
     </scenes>
     <resources>
