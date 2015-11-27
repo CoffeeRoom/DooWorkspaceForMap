@@ -97,15 +97,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDC-HK-wBT">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Map View" id="3pi-Nv-Deg"/>
-                                </items>
-                            </navigationBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5li-NA-xDt">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDC-HK-wBT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="HZB-XJ-hiW"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2U-S6-ngZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="10" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="dismiss:" destination="QnG-fQ-Yw1" eventType="touchUpInside" id="DCF-4S-Z4n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -119,8 +129,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="qDC-HK-wBT"/>
                                 <exclude reference="5li-NA-xDt"/>
+                                <exclude reference="qDC-HK-wBT"/>
+                                <exclude reference="i2U-S6-ngZ"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="FPd-1Y-xOo"/>
@@ -134,8 +145,9 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="qDC-HK-wBT"/>
                                 <include reference="5li-NA-xDt"/>
+                                <include reference="qDC-HK-wBT"/>
+                                <include reference="i2U-S6-ngZ"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="FPd-1Y-xOo"/>
