@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <meta http-equiv='Content-Type' content="text/html; charset=iso-8859-1">
+        <title>Sylvia Project Prototype</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+
+        <div id="container">
+        <div id="header">
+
+        <div id="header_left">
+            <h1>Sylvia <span class="red">Project</span></h1>
+            <h2>Test Web View</h2>
+        </div>
+
+        <div id="header_right">
+
+        <p class="welcome">Welcome, Guest. Please login or <a href="#">register</a>.</p>
+
+        <form id="form1" method="post" action="">
+        <p><label>Username
+        <input type="text" class="fields" name="textfield" />
+        </label>
+        <label>Password
+        <input type="text" class="fields" name="textfield2" />
+        <input type="submit" class="submit_button" name="Submit" value="login" />
+        </label></p>
+        </form>
+        </div>
+  
+        </div>
+
+        <div id="left">
+
+        <h4><span class="menu_first_letter">Catalog</span></h4>
+
+        <div id="navcontainer">
+        <ul id="navlist">
+        <li id="active"><a href="#" id="current">Sylvia Story</a></li>
+        <li class="green"><a href="#">Information</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Forest</a></li>
+        <li><a href="#">Notice</a></li>
+        </ul>
+        </div>
+    </body>
+</html>
