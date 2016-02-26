@@ -8,7 +8,7 @@
         <script src="{% static "js/rango-ajax.js" %}"></script>
         <link rel="stylesheet" type="text/css" href="{% static 'css/baseStyle.css' %}">
         <link rel="shortcut icon" href="{% static "icon/favicon.ico" %}" >
-    
+        <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumpenscript.css"/>
         <title>Sylvia Forest</title>
 
     </head>
@@ -19,13 +19,35 @@
             <img src="{% static "img/bk1.jpg" %}" alt="My image"/>
         </div>
 -->
-        <div id="menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <nav class="menu-base">
+          <ul>
+          <a class="menu-base-link" href="http://google.com" target="_self">sign in</a>
+          <a href="#" class="menu-base-link">sign up</a>
+          </ul>
+        </nav>
+        <nav class="menu-opener">
+          <div class="menu-opener-inner"></div>
+        </nav>
         
+        <nav class="menu">
+          <ul class="menu-inner">
+          <a href="#admin" class="menu-link">
+          <li>이용안내</li>
+          </a>
+          <a href="#" class="menu-link">
+          <li>시설소개</li>
+          </a>
+          <a href="#" class="menu-link">
+          <li>숲탐험대</li>
+          </a>
+          <a href="#" class="menu-link">
+          <li>공지&문의</li>
+          </a>
+          </ul>
+        </nav>
+        
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="{% static "js/menu-opener.js" %}"></script>
         <div>
             
         </div>
